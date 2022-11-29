@@ -60,3 +60,17 @@ The Preprocessor directives
 
 
 
+The Entry point
+```c++
+  int main()
+```
+
+This is the entry point and the main function of the application. Once all statements executes within this function, you app will exits
+
+
+IO Statement
+
+```c++
+  std::cout << "Hello world!";
+```
+Because we included the standard stream which gives us functionalities such as printing to the console. we are able to print an `hello world` to the console.
