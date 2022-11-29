@@ -74,3 +74,26 @@ IO Statement
   std::cout << "Hello world!";
 ```
 Because we included the standard stream which gives us functionalities such as printing to the console. we are able to print an `hello world` to the console.
+
+
+Return and exit app
+
+```c++
+  return 0;
+```
+
+This signals that we are done with the current function and returns 0, stating the application ran without error
+
+
+
+### Exercise: Compiling our first application
+
+```
+  check ./main.cpp
+```
+
+
+### C++ Build Pipeline
+
+- Preprocessor stage: Goes through the code and resolves any preprocessor directives such as include, macros and many others
+- Compilation: 
