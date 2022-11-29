@@ -96,4 +96,4 @@ This signals that we are done with the current function and returns 0, stating t
 ### C++ Build Pipeline
 
 - Preprocessor stage: Goes through the code and resolves any preprocessor directives such as include, macros and many others
-- Compilation: 
+- Compilation: Convert human readable files into object files
