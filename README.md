@@ -50,7 +50,7 @@ PPGL
     
 ```
 
-One
+The Preprocessor directives
 
 ```c++
   #include <iostream>
