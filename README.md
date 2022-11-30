@@ -95,5 +95,41 @@ This signals that we are done with the current function and returns 0, stating t
 
 ### C++ Build Pipeline
 
-- Preprocessor stage: Goes through the code and resolves any preprocessor directives such as include, macros and many others
-- Compilation: Convert human readable files into object files
+- Preprocessor stage: Goes through the code and resolves any preprocessor directives such as include, macros and many others.
+- Compilation: Convert human readable files into object files. o or obj.
+- Linker: Links all object files together to create the final executables.
+
+
+## C++ Keywords
+
+Keywords are reserved name, which you cannot use except for the purpose intended for.
+
+Examples of these keywords include:
+
+- Basic types: `bool char int`
+- Program flow: `if else switch`
+- Object scope: `class struct namespace`
+
+
+```c++
+    #include <iostream>
+    #include <string>
+
+    int main(){
+        int myInt = 1;
+        double myDouble = 1.5;
+        char myChar = 'c';
+        bool myBool = true;
+        
+        if(myBool){
+            std::cout << "true";
+        }else{
+            std::cout << "false";
+        }
+        
+        struct myStruct {
+            int myInt = 1;
+        };
+    }   
+
+```
