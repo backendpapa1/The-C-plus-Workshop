@@ -115,6 +115,18 @@ Examples of these keywords include:
     #include <iostream>
     #include <string>
 
+    class MyClass() {
+        public:
+            int var1;
+            
+        protected:
+            int var2;
+            
+        private:
+            int var3;
+    };
+
+
     int main(){
         int myInt = 1;
         double myDouble = 1.5;
@@ -130,6 +142,11 @@ Examples of these keywords include:
         struct myStruct {
             int myInt = 1;
         };
+        
+        
     }   
 
 ```
+
+
+## Preprocessor Directives
