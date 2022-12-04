@@ -1,26 +1,33 @@
 #include <iostream>
 #include <string>
 
-
+#define NAME_COUNT 5
 int main() {
 
-    int myInt = 1;
-    bool myBool = false;
-    char myChar = 'a';
+    std::string names[NAME_COUNT];
 
+    std::cout << "Please input usernames." << std::endl;
+    for(int i = 0;i < NAME_COUNT;++i) {
+        std::cout << "User " << i + 1 << ": ";
+        std::getline(std::cin, names[i]);
+    }
+        bool bIsRunning = true;
+        while (bIsRunning){
+            int userIndex = 0;
+            std::string inputString = "";
+            std::cout << "Enter user-id of user to fetch or -1 to quit: ";
+            std::getline(std::cin,inputString);
+            userIndex = std::stoi(inputString);
+            if(userIndex == -1){
+                bIsRunning = false;
+            }else{
+                if(userIndex >=0 && userIndex < NAME_COUNT){
+                    std::cout << "User " << userIndex << " - " << names[userIndex] << std::endl;
+                }else{
+                    std::cout << "Invalid user id" << std::endl;
+                }
+            }
+        }
 
-    std::cout << "The size of a int is " << sizeof(myInt) << std::endl;
-    std::cout << "The size of a bool is " << sizeof(myBool) << std::endl;
-    std::cout << "The size of a char is " << sizeof(myChar) << std::endl;
-
-
-    int customerAges[5];
-
-    std::cout << &customerAges[0] << std::endl;
-    std::cout << &customerAges[1] << std::endl;
-    std::cout << &customerAges[2] << std::endl;
-    std::cout << &customerAges[3] << std::endl;
-    std::cout << &customerAges[4] << std::endl;
-    std::cout << sizeof(customerAges) / sizeof (customerAges[0]) << std::endl;
     return 0;
 }
