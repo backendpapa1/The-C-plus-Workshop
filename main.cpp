@@ -1,22 +1,38 @@
 #include <iostream>
 #include <string>
-#include <vector>
 
-std::vector<int> myArray1 {1,2,3,4,5,6,7};
-std::vector<int> myVector (myArray1.begin(),myArray1.end());
+class MyClassName {
+    int myInt = 0;
 
-void PrintVector(){
-    for(int i = 0; i < myVector.size();i++){
-        std::cout << myVector[i] <<std::endl;
+
+    public:
+        MyClassName() {
+            std::cout << "Constructor class called \n";
+            myPublicInt = 5;
+        }
+        int myPublicInt = 0;
+
+    virtual ~MyClassName() {
+        std::cout << "cleaning up class and exiting \n";
     }
-}
+
+
+};
+
+struct myCoordinate {
+    float x = 10.5;
+    float y = 23.4;
+};
 
 int main() {
-    myVector.push_back(1);
-    myVector.pop_back();
-    myVector.insert(myVector.begin()+2,14);
-    myVector.erase(myVector.end()-2);
-    PrintVector();
+
+    MyClassName myClassName;
+    myCoordinate mycoordinate;
+//    mycoordinate.y = 10;
+//    mycoordinate.x = 15;
+    std::cout << myClassName.myPublicInt << std::endl;
+
+
 
     return 0;
 }
